@@ -1,0 +1,779 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+/********************** HERO SECTION COMPONENT STYLING **************************/
+/**********************************************************************************************************************/
+nav {
+  display: flex;
+  max-width: 1500px;
+  min-width: 1500px;
+  padding: 25px 10px 40px 10px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  position: relative;
+  align-items: right;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  height: 0.6px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(201, 201, 201);
+}
+
+nav .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #f9fbf2;
+}
+
+nav .navLinks {
+  flex: 2;
+}
+
+nav .navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .navLinks .links {
+  display: flex;
+  gap: 25px;
+}
+
+nav .navLinks .links a {
+  text-decoration: none;
+  color: hsl(0, 12%, 97%);
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+}
+
+nav .navLinks .links a:hover {
+  color: #fdfbfb;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav svg {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 1520px) {
+  nav {
+    min-width: 100%;
+    padding: 25px 20px 40px 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav {
+    z-index: 20;
+    position: unset;
+    background: #ffffff63;
+    padding: 10px 30px;
+  }
+
+  nav::after {
+    content: "";
+    display: none;
+  }
+
+  nav .navLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .navLinks .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  nav .navLinks .links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    padding: 10px;
+  }
+
+  nav .navLinks .links a {
+    font-size: 18px;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/********************** HERO SECTION COMPONENT STYLING **************************/
+/**********************************************************************************************************************/
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  background: url("C:/Users/ANAND/Desktop/MERN PRO/frontend/public/Drive the Change (1).png") no-repeat center center/cover; /* Ensure the image covers the entire section */
+  background-size: cover;
+  padding: 0;
+}
+
+.heroSection .container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.heroSection .content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.heroSection .title {
+  font-size: 6rem;
+  font-weight: 200;
+  margin-bottom: 0;
+  padding: 0;
+  color: #f9fbf2;
+  
+}
+
+.heroSection .title1 {
+  font-size: 6rem;
+  font-weight: 200;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 10px 50px 20px;
+  color: #f9fbf2;
+
+}
+
+@media (max-width: 1280px) {
+  .heroSection .container {
+    padding: 30px 20px;
+  }
+}
+
+
+@media (max-width: 830px) {
+  .heroSection .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+@media (max-width: 520px) {
+  .heroSection {
+    padding: 0;
+  }
+  .heroSection .container {
+    align-items: center;
+    text-align: center;
+  }
+  
+}
+
+
+
+
+/**********************************************************************************************************************/
+
+/******************* ABOUT US COMPONENT STYLING **************/
+/**********************************************************************************************************************/
+.about {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fbf2;
+}
+.about .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  display: flex;
+}
+.about .container .banner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about .container .banner img {
+  width: 100%;
+}
+.heading {
+  font-weight: 200;
+  font-size: 4rem;
+  color: #111;
+}
+.about .container .banner .mid {
+  width: 65%;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+.about .container .banner .top p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: 2px;
+}
+.about .container .banner a {
+  border: 1px solid black;
+  padding: 8px 28px;
+  border-radius: 30px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+}
+.about .container .banner a span {
+  margin-left: 1rem;
+  padding: 6px;
+  background: #111;
+  border-radius: 100%;
+  color: #fff;
+}
+.about .container .banner a:hover {
+  color: #fff;
+  background: #111;
+  transition: ease-in-out 0.3s;
+}
+.about .container .banner a:hover span {
+  background: #fff;
+  color: #111;
+}
+@media (max-width: 1520px) {
+  .about {
+    padding: 30px 20px;
+  }
+  .about .container {
+    min-width: fit-content;
+  }
+}
+@media (max-width: 1050px) {
+  .about .container .banner:first-child {
+    padding-right: 30px;
+  }
+  .about .container .banner .mid {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 786px) {
+  .about .container {
+    flex-direction: column-reverse;
+  }
+  .about .container .banner img {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .about .container .banner:first-child {
+    padding: 0;
+  }
+}
+@media (max-width: 530px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  .about .container .banner img {
+    width: 100%;
+  }
+}
+.about .container .banner .button-container {
+  display: flex;
+  justify-content: center;
+  display: flow-root;
+  margin-top: 20px;
+}
+
+.explore-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f9f9f9;
+  background-color: #666;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #414142;
+}
+
+.explore-button span {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/*********************************************************************************************************************/
+
+/*  CLUB COMPONENT STYLING */
+/*********************************************************************************************************************/
+.clubs {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+.clubs .container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clubs .heading_section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.clubs .heading_section p {
+  color: #555;
+  font-size: 18px;
+  font-weight: 300;
+}
+.clubs .clubs_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.clubs .card {
+  width: 270px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.clubs .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+.clubs .card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
+  color: #333;
+}
+
+.clubs .card .instagram-link {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.clubs .card .instagram-link img {
+  width: 24px;
+  height: 24px;
+}
+.clubs .card:hover {
+  transform: translateY(-10px);
+}
+
+/*********************************************************************************************************************/
+
+/*Kannada koota styling*/
+
+
+/*******************************************************************************************************/
+.kannada-koota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Arial, sans-serif';
+  color: #333;
+}
+
+.content-kannada {
+  max-width: 800px;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.club-name1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.club-details-kannada,
+.club-founded-kannada {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+.about-section1 {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.about-section1 h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.about-section1 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.social-links1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links1 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.social-links .instagram-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/*Sanskruti page styling*/
+.sanskruti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Arial, sans-serif';
+  color: #333;
+}
+
+.content-sanskruti {
+  max-width: 800px;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.club-name2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.club-details-sanskruti,
+.club-founded-sanskruti {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+.about-section2 {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.about-section2 h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.about-section2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.social-links2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links2 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.social-links2 .instagram-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+
+
+
+/**********************************************************************************************************************/
+
+/******************* LOGIN COMPONENT STYLING **************/
+/**********************************************************************************************************************/
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; 
+}
+
+
+.login {
+  display: flex;
+  min-height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #f0f0f5); 
+}
+
+.login .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.login .container .banner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .container .banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.login .container .banner .login_form_box {
+  flex: 1;
+  max-width: 400px;
+  background: #ffffff; 
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.login .container .banner .login_form_box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333333; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login .container .banner .login_form_box p {
+  font-size: 1.1rem;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+.login .container .banner .login_form_box form div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.login .container .banner .login_form_box form div input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc; 
+  border-radius: 4px;
+}
+
+.login .container .banner .login_form_box form input[type="date"],
+.login .container .banner .login_form_box form input[type="time"] {
+  
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.login .container .banner .login_form_box form input[type="email"],
+.login .container .banner .login_form_box form input[type="number"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.login .container .banner .login_form_box form div input:focus,
+.login .container .banner .login_form_box form input[type="date"]:focus,
+.login .container .banner .login_form_box form input[type="time"]:focus,
+.login .container .banner .login_form_box form input[type="email"]:focus,
+.login .container .banner .login_form_box form input[type="number"]:focus {
+  outline: none;
+  border-color: #6ab4ff; 
+}
+
+.login .container .banner .login_form_box form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f9f9f9; 
+  background-color: #666; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: 20px;
+  
+}
+
+.login .container .banner .login_form_box form button:hover {
+  background-color: #414142; 
+}
+
+.login .container .banner .login_form_box form button span {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  
+}
+
+@media (max-width: 960px) {
+  .login .container {
+    flex-direction: column;
+  }
+}
+
+/**********************************************************************************************************************/
+
+/******************* NOT FOUND PAGE STYLING **************/
+/**********************************************************************************************************************/
+.notFound {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url(/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.notFound .container {
+  max-width: 1500px;
+  text-align: center;
+}
+.notFound .container img {
+  margin-bottom: 2rem;
+}
+.notFound .container h1 {
+  font-size: 2.75rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.notFound .container p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.notFound .container a {
+  border: 1px solid black;
+  padding: 8px 28px;
+  border-radius: 30px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+}
+.notFound .container a span {
+  margin-left: 1rem;
+  padding: 6px;
+  background: #111;
+  border-radius: 100%;
+  color: #fff;
+}
+.notFound .container a:hover {
+  color: #fff;
+  background: #111;
+  transition: ease-in-out 0.3s;
+}
+.notFound .container a:hover span {
+  background: #fff;
+  color: #111;
+}
+@media (max-width: 600px) {
+  .notFound {
+    padding: 30px 20px;
+  }
+  .notFound .container img {
+    width: 100%;
+  }
+  .notFound .container h1 {
+    font-size: 1.75rem;
+  }
+}
+/**********************************************************************************************************************/
